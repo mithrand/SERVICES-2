@@ -52,9 +52,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OAuthServer\OAuthServer.csproj">
+    <ProjectReference Include="..\OAuthServer\OAuth.API.csproj">
       <Project>{C71E46FD-2A19-4FB8-9B22-EF89E6E6F5E9}</Project>
-      <Name>OAuthServer</Name>
+      <Name>OAuth.API</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
