@@ -22,14 +22,6 @@ namespace OAuthServer
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            var container = new UnityContainer();
-            RegisterIOC(container);
-            config.DependencyResolver = new UnityResolver(container);
-        }
-
-        private static void RegisterIOC(UnityContainer container)
-        {
-            container.RegisterType<>(new HierarchicalLifetimeManager());
         }
     }
 }

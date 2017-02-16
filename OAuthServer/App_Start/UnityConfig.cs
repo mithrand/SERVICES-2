@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web.Http;
 using OAuthServer.DI;
 using Microsoft.Practices.Unity;
+using OAuth.Interfaces;
+using SERVICES.REPO;
+using SERVICES.MODEL;
 
 namespace OAuthServer
 {
@@ -18,7 +21,9 @@ namespace OAuthServer
 
         private static void RegisterIOC(UnityContainer container)
         {
-            
+            container.RegisterType<IAuthRepo, UsuariosRepository>();
+            container.RegisterType<IUserModel, Usuario>();
+            container.RegisterType<IServicesDBContext, ServicesDBContext>();
         }
     }
 }

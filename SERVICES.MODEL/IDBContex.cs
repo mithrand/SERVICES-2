@@ -17,7 +17,5 @@ namespace SERVICES.MODEL
         DbEntityEntry<TEntity> Entry<TEntity>(TEntity entity) where TEntity : class;
         IEnumerable<DbEntityValidationResult> GetValidationErrors();
         int SaveChanges();
-        DbSet Set(Type entityType);
-        DbSet<TEntity> Set<TEntity>() where TEntity : class;
     }
 }

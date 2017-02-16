@@ -9,6 +9,7 @@ using SERVICES.MODEL;
 
 namespace SERVICES.API.Controllers
 {
+    [Authorize]
     public class OrdenesController : ApiController
     {
         #region privateMembers
@@ -23,7 +24,7 @@ namespace SERVICES.API.Controllers
             this.ordenesRepo = repo;
         }
 
-        
+
         #endregion
         // GET: api/Ordenes
         public IEnumerable<Orden> Get()
